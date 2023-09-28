@@ -8,7 +8,7 @@ import {
   AppBar as TopBar,
   Toolbar,
 } from '@mui/material'
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
 import Logo from "../assets/react.svg"
 import { useTheme } from '@mui/material/styles'
