@@ -8,19 +8,18 @@ import {
   AppBar as TopBar,
   Toolbar,
 } from '@mui/material'
-import  { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu'
 import Logo from "../assets/react.svg"
 import { useTheme } from '@mui/material/styles'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useNavigate, Link, useLocation } from 'react-router-dom'
+import { CTADialog } from './CTADialog'
 
 export const AppBar = () => {
     const pathname = useLocation()
     const theme = useTheme()
     const navigate = useNavigate()
     const xs = useMediaQuery(theme.breakpoints.only('xs'))
-    const [open, setOpen] = useState(false)
     const showBackButton =
         pathname.pathname.endsWith("/aboutus") ||
         pathname.pathname.endsWith("/pricing")
@@ -61,15 +60,7 @@ export const AppBar = () => {
                               >
                                   pricing
                               </Button>
-                              <Button sx={{ color: 'black' }} onClick={() => setOpen(!open)}>
-                                get in touch
-                              </Button>
-                              <Button
-                                  LinkComponent={Link}
-                                  onClick={() => navigate("/aboutus")}
-                                  sx={{ color: 'black' }}>
-                                  about us
-                              </Button>
+                                <CTADialog/>
                           </Grid>
                       )}
                         <Grid item

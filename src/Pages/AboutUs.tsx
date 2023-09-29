@@ -14,7 +14,7 @@ export const AboutUs = () => {
         title={'Über uns'}
         description={'wir brauchen kohle'}
         rel={'canonical'}
-        href={'/aboutus'}
+        href={'/landing'}
       />
       <div ref={containerRef}>
         <Parallax
