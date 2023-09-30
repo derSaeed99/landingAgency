@@ -45,10 +45,10 @@ export const CTADialog = ({sx}: CTAProps) => {
                     <DialogContent>
                         <Avatar src={logo}></Avatar>
                         <Box sx={{m: 1}}>
-                            <TextField name="email" placeholder="Email" onChange={(e)=> setEmail(e.target.value)} />
+                            <TextField required name="email" placeholder="Email" onChange={(e)=> setEmail(e.target.value)} />
                         </Box>
                         <Box sx={{m: 1}}>
-                            <TextField name="name" placeholder="Name" onChange={(e)=> setName(e.target.value)} />
+                            <TextField required name="name" placeholder="Name" onChange={(e)=> setName(e.target.value)} />
                         </Box>
                     </DialogContent>
                 </DialogTitle>
