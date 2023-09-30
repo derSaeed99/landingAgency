@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { Box, Divider, Grid, Typography } from '@mui/material'
 import { SEOHead } from '../Utils/Head'
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
-import backgroundImage from "../../src/assets/blueprint-background.webp"
+import backgroundImage from "../../src/assets/blueprint.svg"
 
 export const AboutUs = () => {
   const containerRef = React.useRef<HTMLDivElement>(null!)
@@ -23,7 +23,7 @@ export const AboutUs = () => {
           style={{
             top: "0",
             left: "0",
-            backgroundImage: backgroundImage ? `url(${backgroundImage})` : "", backgroundSize: 'cover',
+            backgroundImage: backgroundImage ? `url(${backgroundImage})` : "", 
           }}
         >
           <Grid container
@@ -216,7 +216,7 @@ export const AboutUs = () => {
                 </ParallaxLayer>
               </Grid>
             </ParallaxLayer>
-          </Grid>
+            </Grid>
         </Parallax>
       </div>
     </>

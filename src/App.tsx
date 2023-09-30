@@ -7,7 +7,7 @@ import { CTADialog } from "./Components/CTADialog";
 
 export const App = () => {
   return (
-    <div >
+    <div>
       <AppBar />
       <Routes>
         <Route path="*" element={<AboutUs/>}/>

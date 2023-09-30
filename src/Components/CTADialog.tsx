@@ -13,6 +13,14 @@ export const CTADialog = () => {
             <Dialog open={open} onClose={()=>setOpen(false)}>
                 <DialogTitle>
                     <DialogContent>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+
+  <circle cx="50" cy="50" r="48" fill="#333" />
+
+
+  <text x="20" y="60" font-family="Arial, sans-serif" font-size="40" fill="#fff">A</text>
+  <text x="52" y="60" font-family="Arial, sans-serif" font-size="40" fill="#fff">S</text>
+</svg>
                         <Box sx={{m: 1}}>
                             <TextField name="email" placeholder="Email" />
                         </Box>
