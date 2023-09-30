@@ -2,7 +2,6 @@ import React, { useRef } from 'react'
 import { Box, Divider, Grid, Typography } from '@mui/material'
 import { SEOHead } from '../Utils/Head'
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
-import backgroundImage from "../../src/assets/blueprint.svg"
 import { CTADialog } from '../Components/CTADialog'
 
 export const AboutUs = () => {
@@ -24,7 +23,7 @@ export const AboutUs = () => {
           style={{
             top: "0",
             left: "0",
-            backgroundImage: backgroundImage ? `url(${backgroundImage})` : "", 
+            backgroundColor:"aqua", 
           }}
         >
           <Grid container

@@ -1,12 +1,37 @@
-import {Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, SxProps, TextField } from "@mui/material"
+import {Avatar, Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, SxProps, TextField } from "@mui/material"
+import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react"
+import { db } from "../firebase";
+import logo from "../assets/vite.svg"
 
 interface CTAProps {
     sx?: SxProps;
 }
 
+interface ContactProps {
+    name: string;
+    email: string;
+    message: string;
+    website?: boolean;
+    seo?: boolean;
+    webApp?: boolean;
+    mvp?: boolean;
+}
+
 export const CTADialog = ({sx}: CTAProps) => {
     const [open, setOpen] = useState<boolean>(false)
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [contact, setContact] = useState<ContactProps>()
+    const sendContactInformations = async () => {
+        setContact({
+            name,
+            email,
+            message: "Hallo! Ich habe Interesse an Ihrer Dienstleistung"
+        })
+        await addDoc(collection(db, "contacts"), contact);
+        setOpen(false)
+    }
     return (
         <>
             <Box sx={sx}>
@@ -18,25 +43,18 @@ export const CTADialog = ({sx}: CTAProps) => {
             <Dialog open={open} onClose={()=>setOpen(false)}>
                 <DialogTitle>
                     <DialogContent>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-
-  <circle cx="50" cy="50" r="48" fill="#333" />
-
-
-  <text x="20" y="60" font-family="Arial, sans-serif" font-size="40" fill="#fff">A</text>
-  <text x="52" y="60" font-family="Arial, sans-serif" font-size="40" fill="#fff">S</text>
-</svg>
+                        <Avatar src={logo}></Avatar>
                         <Box sx={{m: 1}}>
-                            <TextField name="email" placeholder="Email" />
+                            <TextField name="email" placeholder="Email" onChange={(e)=> setEmail(e.target.value)} />
                         </Box>
                         <Box sx={{m: 1}}>
-                            <TextField name="name" placeholder="Name" />
+                            <TextField name="name" placeholder="Name" onChange={(e)=> setName(e.target.value)} />
                         </Box>
                     </DialogContent>
                 </DialogTitle>
                 <DialogActions>
                     <Button onClick={() => setOpen(false)}>Abbrechen</Button>
-                    <Button >Senden</Button>
+                    <Button onClick={sendContactInformations}>Senden</Button>
                 </DialogActions>
                 </Dialog>
                 </Box>

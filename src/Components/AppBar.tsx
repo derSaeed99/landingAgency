@@ -9,11 +9,11 @@ import {
   Toolbar,
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
-import Logo from "../assets/react.svg"
 import { useTheme } from '@mui/material/styles'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { useNavigate, Link, useLocation } from 'react-router-dom'
 import { CTADialog } from './CTADialog'
+import Logo from "../assets/vite.svg"
 
 export const AppBar = () => {
     const pathname = useLocation()
