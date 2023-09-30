@@ -84,12 +84,12 @@ export const PricingCards = ({ tiers }: { tiers: Tiers[] }) => {
                       component="h2"
                       variant="h3"
                       color="text.primary">
-                      ${tier.price}
+                      {tier.price}
                     </Typography>
                     <Typography
                       variant="h6"
                       color="text.secondary">
-                      /mo
+                      €
                     </Typography>
                   </Box>
                       <Typography

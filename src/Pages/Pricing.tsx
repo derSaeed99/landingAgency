@@ -12,7 +12,7 @@ export const Pricing = () => {
       price: '1500',
       description:
        " 10 users included, 2 GB of storage, Help center access, Email support",
-      subHeader: 'Sign up for free',
+      subHeader: 'Get started',
       contactType: 'website',
     },
     {
@@ -28,7 +28,7 @@ export const Pricing = () => {
       price: 'X',
       description: 
         "50 users included 30 GB of storag, eHelp center access, Phone & email support",
-      subHeader: 'Get started',
+      subHeader: 'Contact us for personal offerd',
       contactType: 'webApp',
     },
     {
