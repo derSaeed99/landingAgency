@@ -3,6 +3,7 @@ import { Box, Divider, Grid, Typography } from '@mui/material'
 import { SEOHead } from '../Utils/Head'
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import backgroundImage from "../../src/assets/blueprint.svg"
+import { CTADialog } from '../Components/CTADialog'
 
 export const AboutUs = () => {
   const containerRef = React.useRef<HTMLDivElement>(null!)
@@ -210,8 +211,9 @@ export const AboutUs = () => {
                     >
                       Elevate your digital presence with us. Contact us today to bring your vision to life!
                     </Typography>
+                    <CTADialog sx={{mt:2}} />
                     <Divider
-                      sx={{ mt: 10, width: "30%", borderColor: "white" }} />
+                      sx={{ mt: 5, width: "30%", borderColor: "white" }} />
                   </Box>
                 </ParallaxLayer>
               </Grid>

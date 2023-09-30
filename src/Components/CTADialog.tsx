@@ -1,10 +1,15 @@
-import {Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from "@mui/material"
+import {Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, SxProps, TextField } from "@mui/material"
 import { useState } from "react"
 
-export const CTADialog = () => {
+interface CTAProps {
+    sx?: SxProps;
+}
+
+export const CTADialog = ({sx}: CTAProps) => {
     const [open, setOpen] = useState<boolean>(false)
     return (
         <>
+            <Box sx={sx}>
             <Button
                 sx={{ color: 'black' }}
                 onClick={() => setOpen(!open)}>
@@ -33,7 +38,8 @@ export const CTADialog = () => {
                     <Button onClick={() => setOpen(false)}>Abbrechen</Button>
                     <Button >Senden</Button>
                 </DialogActions>
-            </Dialog>
+                </Dialog>
+                </Box>
         </>
   )
 }
