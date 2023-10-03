@@ -41,7 +41,8 @@ export const CTADialog = ({ sx }: CTAProps) => {
                         color: 'white',
                         border: '1px solid rgba(255, 255, 255, 0.5)',
                         ':hover': {
-                            color: 'white',
+                            color: 'black',
+                            backgroundColor: 'white',
                             border: '1px solid rgba(255, 255, 255, 0)',
                         },
                     }}
@@ -131,8 +132,17 @@ export const CTADialog = ({ sx }: CTAProps) => {
                             Abbrechen
                         </Button>
                         <Button
+                            variant="outlined"
                             onClick={sendContactInformations}
-                            sx={{ color: 'white' }}
+                            sx={{
+                                color: 'white',
+                                border: '1px solid rgba(255, 255, 255, 0.5)',
+                                ':hover': {
+                                    color: 'black',
+                                    backgroundColor: 'white',
+                                    border: '1px solid rgba(255, 255, 255, 0)',
+                                },
+                            }}
                         >
                             Senden
                         </Button>
