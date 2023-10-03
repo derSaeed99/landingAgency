@@ -61,14 +61,17 @@ export const AppBar = () => {
                                 justifyContent={'flex-end'}
                             >
                                 {showBackButton && (
-                                    <IconButton onClick={() => navigate('/')}>
+                                    <IconButton
+                                        sx={{ color: 'white' }}
+                                        onClick={() => navigate('/')}
+                                    >
                                         <ArrowBackIosIcon />
                                     </IconButton>
                                 )}
                                 <Button
                                     LinkComponent={Link}
                                     onClick={() => navigate('/pricing')}
-                                    sx={{ color: 'black', mr: 2 }}
+                                    sx={{ color: 'white', mr: 2 }}
                                 >
                                     pricing
                                 </Button>

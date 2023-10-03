@@ -9,7 +9,7 @@ import {
     SxProps,
     TextField,
 } from '@mui/material'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { addContacts } from '../firebase'
 import logo from '../assets/vite.svg'
 import { ContactProps } from '../typing/props'
@@ -32,7 +32,6 @@ export const CTADialog = ({ sx }: CTAProps) => {
         contact && (await addContacts(contact))
         setOpen(false)
     }
-    useEffect(() => {}, [contact])
     return (
         <>
             <Box sx={sx}>
