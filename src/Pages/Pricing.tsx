@@ -4,6 +4,7 @@ import { SEOHead } from '../Utils/Head'
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { PricingCards } from '../Components/PricingCards'
 import { CaTiers } from '../typing/types'
+import desktop4 from '../assets/Desktop-4.webp'
 
 export const Pricing = () => {
     const tiers: CaTiers[] = [
@@ -58,6 +59,9 @@ export const Pricing = () => {
                         top: '0',
                         left: '0',
                         background: 'radial-gradient(circle,#708090 , #333333)',
+                        opacity: 1,
+                        backgroundImage: desktop4 ? `url(${desktop4})` : '',
+                        backgroundSize: 'cover',
                     }}
                 >
                     <Grid
