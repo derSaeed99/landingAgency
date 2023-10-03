@@ -4,6 +4,9 @@ import { SEOHead } from '../Utils/Head'
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { CTADialog } from '../Components/CTADialog'
 import desktop4 from '../assets/Desktop-4.webp'
+import desktop3 from '../assets/Desktop-3.webp'
+import desktop2 from '../assets/Desktop-2.webp'
+import desktop1 from '../assets/Desktop-1.webp'
 
 export const AboutUs = () => {
     const containerRef = React.useRef<HTMLDivElement>(null!)
@@ -24,6 +27,7 @@ export const AboutUs = () => {
                     style={{
                         top: '0',
                         left: '0',
+                        backgroundSize: 'cover',
                         background: 'radial-gradient(circle,#708090 , #333333)',
                     }}
                 >
@@ -39,9 +43,12 @@ export const AboutUs = () => {
                             speed={0.2}
                             offset={0}
                             style={{
-                                backgroundColor: '#2a3439',
-                                opacity: 0.9,
+                                opacity: 0.8,
+                                backgroundImage: desktop1
+                                    ? `url(${desktop1})`
+                                    : '',
                                 boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
+                                backgroundSize: 'cover',
                             }}
                         >
                             <Grid
@@ -64,13 +71,13 @@ export const AboutUs = () => {
                                         <Typography
                                             sx={{ mt: 30 }}
                                             variant="h2"
-                                            color="white"
+                                            color="#333333"
                                         >
                                             About Us
                                         </Typography>
                                         <Typography
                                             variant="h5"
-                                            color="white"
+                                            color="#333333"
                                             align="center"
                                         >
                                             <p style={{ textAlign: 'center' }}>
@@ -109,8 +116,11 @@ export const AboutUs = () => {
                             speed={0.2}
                             offset={1}
                             style={{
-                                backgroundColor: '#2a3439',
-                                opacity: 0.9,
+                                backgroundImage: desktop2
+                                    ? `url(${desktop2})`
+                                    : '',
+                                backgroundSize: 'cover',
+                                opacity: 0.5,
                                 boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
                             }}
                         >
@@ -133,13 +143,13 @@ export const AboutUs = () => {
                                     >
                                         <Typography
                                             variant="h2"
-                                            color="white"
+                                            color="#333333"
                                             sx={{ mt: 30 }}
                                         >
                                             Our Mission
                                         </Typography>
                                         <Typography
-                                            color="white"
+                                            color="#333333"
                                             variant="h5"
                                             align="center"
                                             sx={{
@@ -174,8 +184,11 @@ export const AboutUs = () => {
                             speed={0.2}
                             offset={2}
                             style={{
-                                backgroundColor: '#2a3439',
-                                opacity: 0.9,
+                                backgroundImage: desktop3
+                                    ? `url(${desktop3})`
+                                    : '',
+                                backgroundSize: 'cover',
+                                opacity: 0.5,
                                 boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
                             }}
                         >
@@ -242,8 +255,8 @@ export const AboutUs = () => {
                                 backgroundImage: desktop4
                                     ? `url(${desktop4})`
                                     : '',
-                                opacity: 0.5,
                                 backgroundSize: 'cover',
+                                opacity: 0.5,
                                 boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
                             }}
                         >
