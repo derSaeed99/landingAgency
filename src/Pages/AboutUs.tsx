@@ -3,6 +3,7 @@ import { Box, Divider, Grid, Typography } from '@mui/material'
 import { SEOHead } from '../Utils/Head'
 import { IParallax, Parallax, ParallaxLayer } from '@react-spring/parallax'
 import { CTADialog } from '../Components/CTADialog'
+import desktop4 from '../assets/Desktop-4.webp'
 
 export const AboutUs = () => {
     const containerRef = React.useRef<HTMLDivElement>(null!)
@@ -238,8 +239,11 @@ export const AboutUs = () => {
                             speed={0.2}
                             offset={3}
                             style={{
-                                backgroundColor: '#2a3439',
-                                opacity: 0.9,
+                                backgroundImage: desktop4
+                                    ? `url(${desktop4})`
+                                    : '',
+                                opacity: 0.5,
+                                backgroundSize: 'cover',
                                 boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
                             }}
                         >

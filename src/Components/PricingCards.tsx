@@ -104,7 +104,7 @@ export const PricingCards = ({ tiers }: { tiers: CaTiers[] }) => {
                                         {tier.description}
                                     </Typography>
                                 </CardContent>
-                                <CardActions>
+                                <CardActions sx={{ mb: 2 }}>
                                     <CTADialog />
                                 </CardActions>
                             </Card>
