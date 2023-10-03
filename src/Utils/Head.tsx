@@ -1,20 +1,12 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'
+import { SeoHeadProps } from '../typing/props'
 
-interface SeoHeadProps {
-  title: string
-  description: string;
-  rel: string;
-  href: string;
-}
-
-export const SEOHead = ( { title, description, rel, href }: SeoHeadProps) => {
-  return (
-    <Helmet>
-      <title>
-        {title}
-      </title>
-      <meta name="description" content={ description } />
-      <link rel={ rel } href={href} />
-    </Helmet>
-  )
+export const SEOHead = ({ title, description, rel, href }: SeoHeadProps) => {
+    return (
+        <Helmet>
+            <title>{title}</title>
+            <meta name="description" content={description} />
+            <link rel={rel} href={href} />
+        </Helmet>
+    )
 }
