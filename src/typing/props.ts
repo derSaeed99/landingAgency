@@ -1,3 +1,4 @@
+
 export interface ContactProps {
   name: string;
   email: string;
@@ -13,4 +14,10 @@ export interface SeoHeadProps {
     description: string
     rel: string
     href: string
+}
+
+export interface HeroSectionProps {
+  title: string;
+  paragraph:Element;
+  item?: string;
 }

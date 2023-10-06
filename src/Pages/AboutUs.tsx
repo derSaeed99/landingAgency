@@ -7,6 +7,7 @@ import desktop4 from '../assets/Desktop-4.webp'
 import desktop3 from '../assets/Desktop-3.webp'
 import desktop2 from '../assets/Desktop-2.webp'
 import desktop1 from '../assets/Desktop-1.webp'
+import { HeroSection } from '../Components/HeroSection'
 
 export const AboutUs = () => {
     const containerRef = React.useRef<HTMLDivElement>(null!)
@@ -31,14 +32,7 @@ export const AboutUs = () => {
                         background: 'radial-gradient(circle,#708090 , #333333)',
                     }}
                 >
-                    <Grid
-                        container
-                        sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                        }}
-                    >
+                    <Grid container>
                         <ParallaxLayer
                             speed={0.2}
                             offset={0}
@@ -47,70 +41,24 @@ export const AboutUs = () => {
                                 backgroundImage: desktop1
                                     ? `url(${desktop1})`
                                     : '',
-                                boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
                                 backgroundSize: 'cover',
+                                boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
                             }}
                         >
-                            <Grid
-                                item
-                                sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    flexDirection: 'column',
-                                }}
-                            >
-                                <ParallaxLayer speed={0.2} offset={0}>
-                                    <Box
-                                        sx={{
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            flexDirection: 'column',
-                                        }}
-                                    >
-                                        <Typography
-                                            sx={{ mt: 30 }}
-                                            variant="h2"
-                                            color="#333333"
-                                        >
-                                            About Us
-                                        </Typography>
-                                        <Typography
-                                            variant="h5"
-                                            color="#333333"
-                                            align="center"
-                                        >
-                                            <p style={{ textAlign: 'center' }}>
-                                                we're a tight-knit team
-                                                passionate about digital
-                                                innovation. <br />
-                                                <b>Websites:</b> Crafting
-                                                stunning, high-performing
-                                                websites. <br />
-                                                <b>Web Apps:</b> Creating
-                                                tailored web applications for
-                                                your unique needs.
-                                                <br />
-                                                <b>MVPs:</b> Rapid MVP
-                                                development for startups and
-                                                entrepreneurs.
-                                                <br />
-                                                <b>SEO:</b> Boosting online
-                                                visibility to drive organic
-                                                traffic.
-                                                <br />
-                                            </p>
-                                        </Typography>
-                                        <Divider
-                                            sx={{
-                                                mt: 10,
-                                                width: '30%',
-                                                borderColor: 'white',
-                                            }}
-                                        />
-                                    </Box>
-                                </ParallaxLayer>
-                            </Grid>
+                            <ParallaxLayer speed={0.2} offset={0}>
+                                <Grid
+                                    item
+                                    sx={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        mt: 30,
+                                    }}
+                                >
+                                    <HeroSection />
+                                </Grid>
+                            </ParallaxLayer>
                         </ParallaxLayer>
                         <ParallaxLayer
                             speed={0.2}

@@ -53,9 +53,8 @@ export const CTADialog = ({ sx }: CTAProps) => {
                 <Dialog
                     open={open}
                     onClose={() => setOpen(false)}
-                    PaperProps={{}}
                     sx={{
-                        '& .css-1t1j96h-MuiPaper-root-MuiDialog-paper': {
+                        '& .MuiPaper-root': {
                             opacity: 0.9,
                             backgroundColor: '#333333',
                             boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
