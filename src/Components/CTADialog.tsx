@@ -1,4 +1,5 @@
 import {
+    Alert,
     Avatar,
     Box,
     Button,
@@ -12,7 +13,6 @@ import {
 import { useState } from 'react'
 import { addContacts } from '../firebase'
 import logo from '../assets/vite.svg'
-import { ContactProps } from '../typing/props'
 
 interface CTAProps {
     sx?: SxProps
@@ -20,31 +20,47 @@ interface CTAProps {
 
 export const CTADialog = ({ sx }: CTAProps) => {
     const [open, setOpen] = useState<boolean>(false)
+    const [sent, setSent] = useState<boolean>(false)
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const [contact, setContact] = useState<ContactProps>()
     const sendContactInformations = async () => {
-        contact && (await addContacts(contact))
+        name &&
+            email &&
+            (await addContacts({
+                name,
+                email,
+                message: 'Hallo! Ich habe Interesse an Ihrer Dienstleistung',
+            }))
         setOpen(false)
+        setSent(true)
+        setTimeout(() => setSent(false), 3000)
     }
     return (
         <>
             <Box sx={sx}>
-                <Button
-                    sx={{
-                        color: 'white',
-                        border: '1px solid rgba(255, 255, 255, 0.5)',
-                        ':hover': {
-                            color: 'black',
-                            backgroundColor: 'white',
-                            border: '1px solid rgba(255, 255, 255, 0)',
-                        },
-                    }}
-                    variant="outlined"
-                    onClick={() => setOpen(!open)}
-                >
-                    get in touch
-                </Button>
+                {sent ? (
+                    <Box sx={{ width: 250, height: 36, m: 0, p: 0 }}>
+                        <Alert severity="success">
+                            Thank You! Talk to you later
+                        </Alert>
+                    </Box>
+                ) : (
+                    <Button
+                        sx={{
+                            color: 'white',
+                            border: '1px solid rgba(255, 255, 255, 0.5)',
+                            ':hover': {
+                                color: 'black',
+                                backgroundColor: 'white',
+                                border: '1px solid rgba(255, 255, 255, 0)',
+                            },
+                        }}
+                        variant="outlined"
+                        onClick={() => setOpen(!open)}
+                    >
+                        get in touch
+                    </Button>
+                )}
                 <Dialog
                     open={open}
                     onClose={() => setOpen(false)}
@@ -127,12 +143,6 @@ export const CTADialog = ({ sx }: CTAProps) => {
                         <Button
                             variant="outlined"
                             onClick={() => {
-                                setContact({
-                                    name,
-                                    email,
-                                    message:
-                                        'Hallo! Ich habe Interesse an Ihrer Dienstleistung',
-                                })
                                 sendContactInformations()
                             }}
                             sx={{
