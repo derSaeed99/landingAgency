@@ -24,11 +24,6 @@ export const CTADialog = ({ sx }: CTAProps) => {
     const [email, setEmail] = useState('')
     const [contact, setContact] = useState<ContactProps>()
     const sendContactInformations = async () => {
-        setContact({
-            name,
-            email,
-            message: 'Hallo! Ich habe Interesse an Ihrer Dienstleistung',
-        })
         contact && (await addContacts(contact))
         setOpen(false)
     }
@@ -131,7 +126,15 @@ export const CTADialog = ({ sx }: CTAProps) => {
                         </Button>
                         <Button
                             variant="outlined"
-                            onClick={sendContactInformations}
+                            onClick={() => {
+                                setContact({
+                                    name,
+                                    email,
+                                    message:
+                                        'Hallo! Ich habe Interesse an Ihrer Dienstleistung',
+                                })
+                                sendContactInformations()
+                            }}
                             sx={{
                                 color: 'white',
                                 border: '1px solid rgba(255, 255, 255, 0.5)',
