@@ -31,7 +31,7 @@ export const CTADialog = ({ sx, type }: CTAProps) => {
                 name,
                 email,
                 message: `Hallo! Ich habe Interesse an ${
-                    type ? type : 'Dienstleistung'
+                    type ? type : 'Eurer Dienstleistung'
                 }`,
             }))
         setOpen(false)

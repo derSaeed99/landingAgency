@@ -6,7 +6,6 @@ import { CTADialog } from '../Components/CTADialog'
 import desktop4 from '../assets/Desktop-4.webp'
 import desktop3 from '../assets/Desktop-3.webp'
 import desktop2 from '../assets/Desktop-2.webp'
-import desktop1 from '../assets/Desktop-1.webp'
 import { HeroSection } from '../Components/HeroSection'
 
 export const AboutUs = () => {
@@ -32,233 +31,197 @@ export const AboutUs = () => {
                         background: 'radial-gradient(circle,#708090 , #333333)',
                     }}
                 >
-                    <Grid container>
-                        <ParallaxLayer
-                            speed={0.2}
-                            offset={0}
-                            style={{
-                                opacity: 0.8,
-                                backgroundImage: desktop1
-                                    ? `url(${desktop1})`
-                                    : '',
-                                backgroundSize: 'cover',
-                                boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
+                    <HeroSection />
+                    <ParallaxLayer
+                        speed={0.2}
+                        offset={1}
+                        style={{
+                            backgroundImage: desktop2 ? `url(${desktop2})` : '',
+                            backgroundSize: 'cover',
+                            opacity: 0.5,
+                            boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
+                        }}
+                    >
+                        <Grid
+                            item
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                flexDirection: 'column',
                             }}
                         >
-                            <ParallaxLayer speed={0.2} offset={0}>
-                                <Grid
-                                    item
+                            <ParallaxLayer speed={0.5} offset={0.5}>
+                                <Box
                                     sx={{
                                         display: 'flex',
-                                        flexDirection: 'column',
                                         alignItems: 'center',
-                                        justifyContent: 'center',
-                                        mt: 30,
+                                        flexDirection: 'column',
                                     }}
                                 >
-                                    <HeroSection />
-                                </Grid>
+                                    <Typography
+                                        variant="h2"
+                                        color="#333333"
+                                        sx={{ mt: 30 }}
+                                    >
+                                        Our Mission
+                                    </Typography>
+                                    <Typography
+                                        color="#333333"
+                                        variant="h5"
+                                        align="center"
+                                        sx={{
+                                            mr: { xs: 0, sm: 20, md: 50 },
+                                            ml: { xs: 0, sm: 20, md: 50 },
+                                        }}
+                                    >
+                                        <b>Our mission is clear:</b> to provide
+                                        top-notch digital products and services
+                                        that help you thrive in the digital
+                                        landscape. Whether you're a startup
+                                        looking to establish your online
+                                        presence, an established business
+                                        seeking to upgrade your web platform, or
+                                        an entrepreneur with a groundbreaking
+                                        idea, we're here to turn your vision
+                                        into reality.
+                                    </Typography>
+                                    <Divider
+                                        sx={{
+                                            mt: 10,
+                                            width: '30%',
+                                            borderColor: 'white',
+                                        }}
+                                    />
+                                </Box>
                             </ParallaxLayer>
-                        </ParallaxLayer>
-                        <ParallaxLayer
-                            speed={0.2}
-                            offset={1}
-                            style={{
-                                backgroundImage: desktop2
-                                    ? `url(${desktop2})`
-                                    : '',
-                                backgroundSize: 'cover',
-                                opacity: 0.5,
-                                boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
+                        </Grid>
+                    </ParallaxLayer>
+                    <ParallaxLayer
+                        speed={0.2}
+                        offset={2}
+                        style={{
+                            backgroundImage: desktop3 ? `url(${desktop3})` : '',
+                            backgroundSize: 'cover',
+                            opacity: 0.5,
+                            boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
+                        }}
+                    >
+                        <Grid
+                            item
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                flexDirection: 'column',
                             }}
                         >
-                            <Grid
-                                item
-                                sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    flexDirection: 'column',
-                                }}
-                            >
-                                <ParallaxLayer speed={0.5} offset={0.5}>
-                                    <Box
+                            <ParallaxLayer speed={0.5} offset={0.99}>
+                                <Box
+                                    sx={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        flexDirection: 'column',
+                                    }}
+                                >
+                                    <Typography
+                                        variant="h2"
+                                        color="white"
+                                        sx={{ mt: 30 }}
+                                    >
+                                        Why Us
+                                    </Typography>
+                                    <Typography
+                                        color="white"
+                                        variant="h5"
+                                        align="center"
                                         sx={{
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            flexDirection: 'column',
+                                            mr: { xs: 0, sm: 20, md: 50 },
+                                            ml: { xs: 0, sm: 20, md: 50 },
                                         }}
                                     >
-                                        <Typography
-                                            variant="h2"
-                                            color="#333333"
-                                            sx={{ mt: 30 }}
-                                        >
-                                            Our Mission
-                                        </Typography>
-                                        <Typography
-                                            color="#333333"
-                                            variant="h5"
-                                            align="center"
-                                            sx={{
-                                                mr: { xs: 0, sm: 20, md: 50 },
-                                                ml: { xs: 0, sm: 20, md: 50 },
-                                            }}
-                                        >
-                                            <b>Our mission is clear:</b> to
-                                            provide top-notch digital products
-                                            and services that help you thrive in
-                                            the digital landscape. Whether
-                                            you're a startup looking to
-                                            establish your online presence, an
-                                            established business seeking to
-                                            upgrade your web platform, or an
-                                            entrepreneur with a groundbreaking
-                                            idea, we're here to turn your vision
-                                            into reality.
-                                        </Typography>
-                                        <Divider
-                                            sx={{
-                                                mt: 10,
-                                                width: '30%',
-                                                borderColor: 'white',
-                                            }}
-                                        />
-                                    </Box>
-                                </ParallaxLayer>
-                            </Grid>
-                        </ParallaxLayer>
-                        <ParallaxLayer
-                            speed={0.2}
-                            offset={2}
-                            style={{
-                                backgroundImage: desktop3
-                                    ? `url(${desktop3})`
-                                    : '',
-                                backgroundSize: 'cover',
-                                opacity: 0.5,
-                                boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
+                                        <b>Expertise:</b> Industry experts
+                                        committed to staying at the forefront of
+                                        technology.
+                                        <br />
+                                        <b>Personalized:</b> Tailoring solutions
+                                        to your specific requirements.
+                                        <br />
+                                        <b>Quality:</b> Rigorous quality
+                                        assurance for flawless results.
+                                        <br />
+                                    </Typography>
+                                    <Divider
+                                        sx={{
+                                            mt: 10,
+                                            width: '30%',
+                                            borderColor: 'white',
+                                        }}
+                                    />
+                                </Box>
+                            </ParallaxLayer>
+                        </Grid>
+                    </ParallaxLayer>
+                    <ParallaxLayer
+                        speed={0.2}
+                        offset={3}
+                        style={{
+                            backgroundImage: desktop4 ? `url(${desktop4})` : '',
+                            backgroundSize: 'cover',
+                            opacity: 0.5,
+                            boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
+                        }}
+                    >
+                        <Grid
+                            item
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                flexDirection: 'column',
                             }}
                         >
-                            <Grid
-                                item
-                                sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    flexDirection: 'column',
-                                }}
-                            >
-                                <ParallaxLayer speed={0.5} offset={0.99}>
-                                    <Box
+                            <ParallaxLayer speed={0.5} offset={1}>
+                                <Box
+                                    sx={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        flexDirection: 'column',
+                                    }}
+                                >
+                                    <Typography
+                                        variant="h2"
+                                        color="white"
+                                        align="center"
+                                        sx={{ mt: 30 }}
+                                    >
+                                        Let's Collaborate
+                                    </Typography>
+                                    <Typography
+                                        color="white"
+                                        variant="h5"
+                                        align="center"
                                         sx={{
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            flexDirection: 'column',
+                                            mr: { xs: 0, sm: 20, md: 50 },
+                                            ml: { xs: 0, sm: 20, md: 50 },
                                         }}
                                     >
-                                        <Typography
-                                            variant="h2"
-                                            color="white"
-                                            sx={{ mt: 30 }}
-                                        >
-                                            Why Us
-                                        </Typography>
-                                        <Typography
-                                            color="white"
-                                            variant="h5"
-                                            align="center"
-                                            sx={{
-                                                mr: { xs: 0, sm: 20, md: 50 },
-                                                ml: { xs: 0, sm: 20, md: 50 },
-                                            }}
-                                        >
-                                            <b>Expertise:</b> Industry experts
-                                            committed to staying at the
-                                            forefront of technology.
-                                            <br />
-                                            <b>Personalized:</b> Tailoring
-                                            solutions to your specific
-                                            requirements.
-                                            <br />
-                                            <b>Quality:</b> Rigorous quality
-                                            assurance for flawless results.
-                                            <br />
-                                        </Typography>
-                                        <Divider
-                                            sx={{
-                                                mt: 10,
-                                                width: '30%',
-                                                borderColor: 'white',
-                                            }}
-                                        />
-                                    </Box>
-                                </ParallaxLayer>
-                            </Grid>
-                        </ParallaxLayer>
-                        <ParallaxLayer
-                            speed={0.2}
-                            offset={3}
-                            style={{
-                                backgroundImage: desktop4
-                                    ? `url(${desktop4})`
-                                    : '',
-                                backgroundSize: 'cover',
-                                opacity: 0.5,
-                                boxShadow: '0px 0px 20px rgba(0, 0, 0, 0.5)',
-                            }}
-                        >
-                            <Grid
-                                item
-                                sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    flexDirection: 'column',
-                                }}
-                            >
-                                <ParallaxLayer speed={0.5} offset={1}>
-                                    <Box
+                                        Elevate your digital presence with us.
+                                        Contact us today to bring your vision to
+                                        life!
+                                    </Typography>
+                                    <CTADialog sx={{ mt: 2 }} />
+                                    <Divider
                                         sx={{
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            flexDirection: 'column',
+                                            mt: 5,
+                                            width: '30%',
+                                            borderColor: 'white',
                                         }}
-                                    >
-                                        <Typography
-                                            variant="h2"
-                                            color="white"
-                                            align="center"
-                                            sx={{ mt: 30 }}
-                                        >
-                                            Let's Collaborate
-                                        </Typography>
-                                        <Typography
-                                            color="white"
-                                            variant="h5"
-                                            align="center"
-                                            sx={{
-                                                mr: { xs: 0, sm: 20, md: 50 },
-                                                ml: { xs: 0, sm: 20, md: 50 },
-                                            }}
-                                        >
-                                            Elevate your digital presence with
-                                            us. Contact us today to bring your
-                                            vision to life!
-                                        </Typography>
-                                        <CTADialog sx={{ mt: 2 }} />
-                                        <Divider
-                                            sx={{
-                                                mt: 5,
-                                                width: '30%',
-                                                borderColor: 'white',
-                                            }}
-                                        />
-                                    </Box>
-                                </ParallaxLayer>
-                            </Grid>
-                        </ParallaxLayer>
-                    </Grid>
+                                    />
+                                </Box>
+                            </ParallaxLayer>
+                        </Grid>
+                    </ParallaxLayer>
                 </Parallax>
             </div>
         </>
