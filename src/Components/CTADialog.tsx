@@ -30,7 +30,9 @@ export const CTADialog = ({ sx, type }: CTAProps) => {
             (await addContacts({
                 name,
                 email,
-                message: `Hallo! Ich habe Interesse an ${type}`,
+                message: `Hallo! Ich habe Interesse an ${
+                    type ? type : 'Dienstleistung'
+                }`,
             }))
         setOpen(false)
         setSent(true)
@@ -39,7 +41,7 @@ export const CTADialog = ({ sx, type }: CTAProps) => {
     return (
         <>
             <Box sx={sx}>
-                {sent ? (
+                {sent && type ? (
                     <Box sx={{ width: 250, height: 36, m: 0, p: 0 }}>
                         <Alert severity="success">
                             Thank You! Talk to you later
