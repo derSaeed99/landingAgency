@@ -142,9 +142,7 @@ export const CTADialog = ({ sx }: CTAProps) => {
                         </Button>
                         <Button
                             variant="outlined"
-                            onClick={() => {
-                                sendContactInformations()
-                            }}
+                            onClick={sendContactInformations}
                             sx={{
                                 color: 'white',
                                 border: '1px solid rgba(255, 255, 255, 0.5)',
