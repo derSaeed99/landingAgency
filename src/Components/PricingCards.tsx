@@ -105,7 +105,7 @@ export const PricingCards = ({ tiers }: { tiers: CaTiers[] }) => {
                                     </Typography>
                                 </CardContent>
                                 <CardActions sx={{ mb: 2 }}>
-                                    <CTADialog />
+                                    <CTADialog type={tier.contactType} />
                                 </CardActions>
                             </Card>
                         </Grid>

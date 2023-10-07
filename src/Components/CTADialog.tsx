@@ -16,9 +16,10 @@ import logo from '../assets/vite.svg'
 
 interface CTAProps {
     sx?: SxProps
+    type?: string
 }
 
-export const CTADialog = ({ sx }: CTAProps) => {
+export const CTADialog = ({ sx, type }: CTAProps) => {
     const [open, setOpen] = useState<boolean>(false)
     const [sent, setSent] = useState<boolean>(false)
     const [name, setName] = useState('')
@@ -29,7 +30,7 @@ export const CTADialog = ({ sx }: CTAProps) => {
             (await addContacts({
                 name,
                 email,
-                message: 'Hallo! Ich habe Interesse an Ihrer Dienstleistung',
+                message: `Hallo! Ich habe Interesse an ${type}`,
             }))
         setOpen(false)
         setSent(true)
