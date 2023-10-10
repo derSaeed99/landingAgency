@@ -7,6 +7,7 @@ import {
     useMediaQuery,
     AppBar as TopBar,
     Toolbar,
+    Drawer,
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import { useTheme } from '@mui/material/styles'
@@ -14,11 +15,13 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
 import { useNavigate, Link, useLocation } from 'react-router-dom'
 import { CTADialog } from './CTADialog'
 import Logo from '../assets/vite.svg'
+import { useState } from 'react'
 
 export const AppBar = () => {
     const pathname = useLocation()
     const theme = useTheme()
     const navigate = useNavigate()
+    const [toggelDrawer, setToggelDrawer] = useState(false)
     const xs = useMediaQuery(theme.breakpoints.only('xs'))
     const showBackButton =
         pathname.pathname.endsWith('/aboutus') ||
@@ -83,17 +86,69 @@ export const AppBar = () => {
                             sm={2}
                             xs={4}
                             display="flex"
-                            justifyContent={'flex-end'}
+                            justifyContent={'center'}
+                            alignItems={'center'}
                         >
                             {xs && (
-                                <IconButton
-                                    onClick={() => alert('fuck off')}
-                                    sx={{
-                                        mr: 2,
-                                    }}
-                                >
-                                    <MenuIcon />
-                                </IconButton>
+                                <>
+                                    <IconButton
+                                        onClick={() => setToggelDrawer(true)}
+                                        sx={{
+                                            mr: 2,
+                                        }}
+                                    >
+                                        <MenuIcon />
+                                    </IconButton>
+                                    <Grid>
+                                        <Drawer
+                                            sx={{
+                                                '& .MuiPaper-root': {
+                                                    width: '60%',
+                                                    opacity: 0.9,
+                                                    backgroundColor: '#333333',
+                                                    boxShadow:
+                                                        '0px 0px 20px rgba(0, 0, 0, 0.5)',
+                                                },
+                                            }}
+                                            anchor={'right'}
+                                            open={toggelDrawer}
+                                            onClose={() =>
+                                                setToggelDrawer(false)
+                                            }
+                                        >
+                                            <Grid
+                                                item
+                                                sx={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    flexDirection: 'column',
+                                                }}
+                                            >
+                                                <Button
+                                                    LinkComponent={Link}
+                                                    onClick={() =>
+                                                        navigate('/pricing')
+                                                    }
+                                                    sx={{
+                                                        color: 'white',
+                                                        mt: 10,
+                                                    }}
+                                                >
+                                                    pricing
+                                                </Button>
+                                                <CTADialog />
+                                                <Button
+                                                    sx={{ color: 'white' }}
+                                                    onClick={() =>
+                                                        navigate('/')
+                                                    }
+                                                >
+                                                    Back
+                                                </Button>
+                                            </Grid>
+                                        </Drawer>
+                                    </Grid>
+                                </>
                             )}
                         </Grid>
                     </Grid>

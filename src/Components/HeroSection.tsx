@@ -35,21 +35,21 @@ export const HeroSection = () => {
                                     opacity: 0.5,
                                     ml: { xs: 8, sm: 60, md: 25 },
                                     // animation:
-                                    animation: 'blinking 10s infinite',
-                                    '@keyframes blinking': {
-                                        '0%, 100%': {
-                                            color: '#fff',
-                                        },
-                                        '25%': {
-                                            color: 'transparent',
-                                        },
-                                        '50%': {
-                                            color: '#fff',
-                                        },
-                                        '75%': {
-                                            color: 'transparent',
-                                        },
-                                    },
+                                    // animation: 'blinking 10s infinite',
+                                    // '@keyframes blinking': {
+                                    //     '0%, 100%': {
+                                    //         color: '#fff',
+                                    //     },
+                                    //     '25%': {
+                                    //         color: 'transparent',
+                                    //     },
+                                    //     '50%': {
+                                    //         color: '#fff',
+                                    //     },
+                                    //     '75%': {
+                                    //         color: 'transparent',
+                                    //     },
+                                    // },
                                 }}
                             />
                         </Grid>
