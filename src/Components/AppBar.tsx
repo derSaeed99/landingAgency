@@ -25,7 +25,7 @@ export const AppBar = () => {
     const xs = useMediaQuery(theme.breakpoints.only('xs'))
     const showBackButton =
         pathname.pathname.endsWith('/aboutus') ||
-        pathname.pathname.endsWith('/pricing')
+        pathname.pathname.endsWith('/services')
     return (
         <>
             <CssBaseline />
@@ -73,10 +73,10 @@ export const AppBar = () => {
                                 )}
                                 <Button
                                     LinkComponent={Link}
-                                    onClick={() => navigate('/pricing')}
+                                    onClick={() => navigate('/services')}
                                     sx={{ color: 'white', mr: 2 }}
                                 >
-                                    pricing
+                                    services
                                 </Button>
                                 <CTADialog />
                             </Grid>
@@ -127,14 +127,14 @@ export const AppBar = () => {
                                                 <Button
                                                     LinkComponent={Link}
                                                     onClick={() =>
-                                                        navigate('/pricing')
+                                                        navigate('/services')
                                                     }
                                                     sx={{
                                                         color: 'white',
                                                         mt: 10,
                                                     }}
                                                 >
-                                                    pricing
+                                                    services
                                                 </Button>
                                                 <CTADialog />
                                                 <Button

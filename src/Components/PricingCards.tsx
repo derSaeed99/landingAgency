@@ -1,4 +1,3 @@
-import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
@@ -29,7 +28,7 @@ export const PricingCards = ({ tiers }: { tiers: CaTiers[] }) => {
                     color="white"
                     gutterBottom
                 >
-                    Pricing
+                    What I offer
                 </Typography>
                 <Grid container spacing={5} alignItems="flex-end">
                     {tiers.map((tier) => (
@@ -73,28 +72,6 @@ export const PricingCards = ({ tiers }: { tiers: CaTiers[] }) => {
                                     }}
                                 />
                                 <CardContent>
-                                    <Box
-                                        sx={{
-                                            display: 'flex',
-                                            justifyContent: 'center',
-                                            alignItems: 'baseline',
-                                            mb: 2,
-                                        }}
-                                    >
-                                        <Typography
-                                            component="h2"
-                                            variant="h3"
-                                            color="text.primary"
-                                        >
-                                            {tier.price}
-                                        </Typography>
-                                        <Typography
-                                            variant="h6"
-                                            color="text.secondary"
-                                        >
-                                            €
-                                        </Typography>
-                                    </Box>
                                     <Typography
                                         component="li"
                                         variant="subtitle1"

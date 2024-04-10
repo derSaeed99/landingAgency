@@ -1,27 +1,36 @@
-# React + TypeScript + Vite
+# butaasia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React and TypeScript project (Vite-App).
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a try of an own visiting landingpage. It's hosted on Google Cloud
+CHECK OUT LIVE APP: https://agencylanding.web.app/
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project uses npm and yarn. To install dependencies, run:
 
-- Configure the top-level `parserOptions` property like this:
+## yarn install
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Usage
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+To start the project, run: yarn dev
+
+## Contributing
+
+If you want to contribute to this project, here's how you can do it:
+
+## Fork the Project
+
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+Push to the Branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+
+## License
+
+Distributed under the MIT License.
+
+Contact
+Armughan Saeed - ased99@gmail.com

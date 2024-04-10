@@ -6,38 +6,29 @@ import { PricingCards } from '../Components/PricingCards'
 import { CaTiers } from '../typing/types'
 import desktop4 from '../assets/Desktop-4.webp'
 
-export const Pricing = () => {
+export const Services = () => {
     const tiers: CaTiers[] = [
         {
             title: 'Websites',
-            price: '1500',
             description:
-                ' 10 users included, 2 GB of storage, Help center access, Email support',
-            subHeader: 'Get started',
+                'Ideal for small businesses, freelancers, and personal projects.',
+            subHeader:
+                'Visiting Card Website, Landing Page, Blog, Portfolio etc.',
             contactType: 'website',
         },
         {
-            title: 'SEO Optimization',
-            price: '1200',
-            description:
-                '20 users included 10 GB of storag eHelp center access Priority email support',
-            subHeader: 'Get started',
-            contactType: 'seo',
-        },
-        {
             title: 'WebApp',
-            price: 'X',
             description:
-                '50 users included 30 GB of storag, eHelp center access, Phone & email support',
-            subHeader: 'Contact us for personal offerd',
+                'Make your business more efficient with a custom web application.',
+            subHeader: 'Custom Web Application, E-commerce, CRM, etc.',
             contactType: 'webApp',
         },
         {
-            title: 'Minimum Viable Product',
-            price: 'x',
+            title: 'MVP',
             description:
-                '50 users included 30 GB of storag, eHelp center access, Phone & email support',
-            subHeader: 'Contact us for personal offer',
+                'Get your startup off the ground with a minimum viable product.',
+            subHeader:
+                'Custom Calendar, Task Manager, Scheduler, Todo App, etc.',
             contactType: 'mvp',
         },
     ]
@@ -46,14 +37,14 @@ export const Pricing = () => {
     return (
         <>
             <SEOHead
-                title={'Preise'}
-                description={'Gib uns viel Kohle'}
+                title={'Services'}
+                description={'Was ich anbiete'}
                 rel={'canonical'}
-                href={'/pricing'}
+                href={'/services'}
             />
             <div ref={containerRef}>
                 <Parallax
-                    pages={1.2}
+                    pages={1}
                     ref={slideRef}
                     style={{
                         top: '0',

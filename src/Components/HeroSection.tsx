@@ -2,6 +2,7 @@ import { Grid, Typography, useMediaQuery, useTheme } from '@mui/material'
 import { ParallaxLayer } from '@react-spring/parallax'
 import TipsAndUpdatesOutlinedIcon from '@mui/icons-material/TipsAndUpdatesOutlined'
 import desktop1 from '../assets/Desktop-1.webp'
+import { TechStackIcons } from './TechStackIcons'
 export const HeroSection = () => {
     const theme = useTheme()
     const isXs = useMediaQuery(theme.breakpoints.only('xs'))
@@ -121,6 +122,7 @@ export const HeroSection = () => {
                                 ))}
                             </Typography>
                         </Grid>
+                        <TechStackIcons />
                     </Grid>
                 </ParallaxLayer>
             </ParallaxLayer>
