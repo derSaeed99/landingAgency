@@ -7,6 +7,7 @@ import desktop4 from '../assets/Desktop-4.webp'
 import desktop3 from '../assets/Desktop-3.webp'
 import desktop2 from '../assets/Desktop-2.webp'
 import { HeroSection } from '../Components/HeroSection'
+import { Projects } from '../Components/Projects'
 
 export const AboutUs = () => {
     const containerRef = React.useRef<HTMLDivElement>(null!)
@@ -22,7 +23,7 @@ export const AboutUs = () => {
             />
             <div ref={containerRef}>
                 <Parallax
-                    pages={4}
+                    pages={5}
                     ref={slideRef}
                     style={{
                         top: '0',
@@ -71,8 +72,9 @@ export const AboutUs = () => {
                                         variant="h5"
                                         align="center"
                                         sx={{
-                                            mr: { xs: 0, sm: 20, md: 50 },
-                                            ml: { xs: 0, sm: 20, md: 50 },
+                                            width:"60%",
+                                            mr: { xs: 0, sm: 50 },
+                                            ml: { xs: 0, sm: 50 },
                                         }}
                                     >
                                         <b>Our mission is clear:</b> to provide
@@ -97,9 +99,10 @@ export const AboutUs = () => {
                             </ParallaxLayer>
                         </Grid>
                     </ParallaxLayer>
+                    <Projects />
                     <ParallaxLayer
                         speed={0.2}
-                        offset={2}
+                        offset={3}
                         style={{
                             backgroundImage: desktop3 ? `url(${desktop3})` : '',
                             backgroundSize: 'cover',
@@ -116,7 +119,7 @@ export const AboutUs = () => {
                                 flexDirection: 'column',
                             }}
                         >
-                            <ParallaxLayer speed={0.5} offset={0.99}>
+                            <ParallaxLayer speed={0.5} offset={1}>
                                 <Box
                                     sx={{
                                         display: 'flex',
@@ -161,10 +164,11 @@ export const AboutUs = () => {
                                 </Box>
                             </ParallaxLayer>
                         </Grid>
+                        
                     </ParallaxLayer>
                     <ParallaxLayer
                         speed={0.2}
-                        offset={3}
+                        offset={4}
                         style={{
                             backgroundImage: desktop4 ? `url(${desktop4})` : '',
                             backgroundSize: 'cover',
@@ -181,7 +185,7 @@ export const AboutUs = () => {
                                 flexDirection: 'column',
                             }}
                         >
-                            <ParallaxLayer speed={0.5} offset={1}>
+                            <ParallaxLayer speed={0.5} offset={1.5}>
                                 <Box
                                     sx={{
                                         display: 'flex',
